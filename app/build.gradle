@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "net.hockeyapp.demo.android"
-        minSdkVersion 9
+        minSdkVersion 15
         versionCode 1
         targetSdkVersion 24
         versionName "1.0.0"
