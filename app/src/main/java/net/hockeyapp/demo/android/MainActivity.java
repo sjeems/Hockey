@@ -11,6 +11,9 @@ import net.hockeyapp.android.*;
 import net.hockeyapp.android.metrics.MetricsManager;
 import net.hockeyapp.android.utils.HockeyLog;
 import net.hockeyapp.android.utils.Util;
+import com.microsoft.azure.mobile.MobileCenter;
+import com.microsoft.azure.mobile.analytics.Analytics;
+import com.microsoft.azure.mobile.crashes.Crashes;
 
 import org.json.JSONArray;
 
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+    MobileCenter.start(getApplication(), "467fbf1c-4276-46ab-8b06-ef5117141317", Analytics.class, Crashes.class);
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
